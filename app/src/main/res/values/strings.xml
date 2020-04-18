@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Notebook</string>
+    <string name="title_activity_details">Details</string>
+    <string name="title_activity_detail">Detail</string>
+    <string name="empty_list_txt">Tap + to Add your first note!</string>
+</resources>
