@@ -28,9 +28,16 @@ public class Detail extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         Intent i = getIntent();
         id = i.getLongExtra("ID",0);
-       Database db = new Database(this);
+        Database db = new Database(this);
         Note note = db.getNote(id);
         getSupportActionBar().setTitle(note.getTitle());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Debug;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
             noItemText.setVisibility(View.GONE);
             displayList(allNotes);
         }
+
+
 
     }
 
