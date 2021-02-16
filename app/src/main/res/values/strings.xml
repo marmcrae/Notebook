@@ -3,4 +3,7 @@
     <string name="title_activity_details">Details</string>
     <string name="title_activity_detail">Detail</string>
     <string name="empty_list_txt">Tap + to Add your first note!</string>
+    <string name="dialog_main">Are you sure you want to cancel?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 </resources>

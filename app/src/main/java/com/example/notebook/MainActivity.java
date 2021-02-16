@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     TextView noItemText;
     Database Database;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
             noItemText.setVisibility(View.GONE);
             displayList(allNotes);
         }
-
-
-
     }
 
     private void displayList(List<Note> allNotes) {
@@ -71,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.add){
-            Toast.makeText(this, "Enter your new Note!", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this,AddNote.class);
             startActivity(i);
         }
@@ -88,8 +83,5 @@ public class MainActivity extends AppCompatActivity {
             noItemText.setVisibility(View.GONE);
             displayList(getAllNotes);
         }
-
-
     }
-
 }

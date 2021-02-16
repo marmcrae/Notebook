@@ -2,6 +2,7 @@ package com.example.notebook;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +25,6 @@ public class Edit extends AppCompatActivity {
     String todaysDate;
     String currentTime;
     long nId;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,9 +106,9 @@ public class Edit extends AppCompatActivity {
             Log.d("EDITED", "EDIT: id " + id);
             goToMain();
             Toast.makeText(this, "Note Edited.", Toast.LENGTH_SHORT).show();
+
         }else if(item.getItemId() == R.id.delete){
-            Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
-            onBackPressed();
+            showAlertDialog();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -118,5 +118,9 @@ public class Edit extends AppCompatActivity {
         startActivity(i);
     }
 
-
+    private void showAlertDialog(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        EditDialog dialog = EditDialog.newInstance("Cancel");
+        dialog.show(fragmentManager, "fragment_alert");
+    }
 }
